@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 2054028210}
   - component: {fileID: 2054028209}
   - component: {fileID: 2054028208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6657,9 +6657,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6022142457879339634, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6933481854831485019, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
       propertyPath: runSpeed
-      value: 6
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933481854831485019, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
+      propertyPath: jumpSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7824368649320396823, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
       propertyPath: m_Name
