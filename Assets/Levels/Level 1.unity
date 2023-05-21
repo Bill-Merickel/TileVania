@@ -20231,10 +20231,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barry
       objectReference: {fileID: 0}
-    - target: {fileID: 7824368649320396823, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 7824368649320396826, guid: 386af9f8c139246239b0ec0d45d76da6, type: 3}
       propertyPath: m_RootOrder
       value: 2
