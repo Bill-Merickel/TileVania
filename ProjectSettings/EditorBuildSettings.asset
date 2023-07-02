@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level 8.unity
     guid: 26d61573ff67c47c78c382ec00e37524
+  - enabled: 1
+    path: Assets/Levels/Level 9.unity
+    guid: d7f1a61e6dad9436f8950707f4652c57
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b3160ceebaea34aeb9ac79085fdb931b, type: 2}
