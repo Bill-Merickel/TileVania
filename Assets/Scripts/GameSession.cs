@@ -28,7 +28,6 @@ public class GameSession : MonoBehaviour
     }
 
     void Start() {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         livesText.text = "";
         scoreText.text = "";
         titleText.text = "TileVania";
@@ -39,12 +38,32 @@ public class GameSession : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneIndex == 0 && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(1);
-            livesText.text = playerLives.ToString();
-            scoreText.text = score.ToString();
-            titleText.text = "";
-            startInstructionText.text = "";
+            LoadFirstLevel();
         }
+    }
+
+    public void ResetPlayerStats()
+    {
+        playerLives = 3;
+        score = 0;
+    }
+
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene(1);
+        livesText.text = playerLives.ToString();
+        scoreText.text = score.ToString();
+        titleText.text = "";
+        startInstructionText.text = "";
+    }
+
+    public void DisplayVictoryText()
+    {
+        ResetPlayerStats();
+        livesText.text = "";
+        scoreText.text = "";
+        titleText.text = "You Won!";
+        startInstructionText.text = "Click Enter to Play Again";
     }
 
     public void ProcessPlayerDeath()

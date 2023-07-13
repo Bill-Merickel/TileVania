@@ -23,6 +23,7 @@ public class LevelExit : MonoBehaviour
 
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
+            FindObjectOfType<GameSession>().DisplayVictoryText();
             nextSceneIndex = 0;
         }
         
