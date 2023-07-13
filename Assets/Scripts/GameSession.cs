@@ -11,6 +11,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] int score = 0;
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI titleText;
+    [SerializeField] TextMeshProUGUI startInstructionText;
 
     void Awake()
     {
@@ -26,8 +28,23 @@ public class GameSession : MonoBehaviour
     }
 
     void Start() {
-        livesText.text = playerLives.ToString();
-        scoreText.text = score.ToString();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        livesText.text = "";
+        scoreText.text = "";
+        titleText.text = "TileVania";
+        startInstructionText.text = "Click Enter to Start";
+    }
+
+    void Update() {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == 0 && Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(1);
+            livesText.text = playerLives.ToString();
+            scoreText.text = score.ToString();
+            titleText.text = "";
+            startInstructionText.text = "";
+        }
     }
 
     public void ProcessPlayerDeath()
