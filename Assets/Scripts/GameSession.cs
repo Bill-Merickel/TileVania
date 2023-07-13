@@ -50,6 +50,7 @@ public class GameSession : MonoBehaviour
 
     public void LoadFirstLevel()
     {
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(1);
         livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
