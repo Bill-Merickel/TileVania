@@ -68,6 +68,10 @@ PrefabInstance:
       value: Big Coin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9022112421858877479, guid: 0ac601b71fd5d4fc08bd39edd8a5cb96, type: 3}
+      propertyPath: coinPickupSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b73266e0509164f56a40d26975ad1806, type: 3}
+    - target: {fileID: 9022112421858877479, guid: 0ac601b71fd5d4fc08bd39edd8a5cb96, type: 3}
       propertyPath: pointsForCoinPickup
       value: 200
       objectReference: {fileID: 0}
