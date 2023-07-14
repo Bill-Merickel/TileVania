@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isAlive)
         {
-            Instantiate(fireball, fireballGun.position, transform.rotation);
+            // Instantiate(fireball, fireballGun.position, transform.rotation);
         }
     }
 
