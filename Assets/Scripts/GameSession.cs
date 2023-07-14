@@ -36,9 +36,16 @@ public class GameSession : MonoBehaviour
 
     void Update() {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == 0 && Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            LoadFirstLevel();
+            if (currentSceneIndex == 0)
+            {
+                LoadFirstLevel();
+            }
+            else if (currentSceneIndex == 1)
+            {
+                ResetGameSession();
+            }
         }
     }
 
@@ -51,7 +58,8 @@ public class GameSession : MonoBehaviour
     public void LoadFirstLevel()
     {
         FindObjectOfType<ScenePersist>().ResetScenePersist();
-        SceneManager.LoadScene(1);
+        ResetPlayerStats();
+        SceneManager.LoadScene(2);
         livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
         titleText.text = "";
@@ -67,6 +75,15 @@ public class GameSession : MonoBehaviour
         startInstructionText.text = "Click Enter to Play Again";
     }
 
+    public void DisplayGameOverText()
+    {
+        ResetPlayerStats();
+        livesText.text = "";
+        scoreText.text = "";
+        titleText.text = "Game Over";
+        startInstructionText.text = "Click Enter to Try Again";
+    }
+
     public void ProcessPlayerDeath()
     {
         if (playerLives > 1)
@@ -75,7 +92,7 @@ public class GameSession : MonoBehaviour
         }
         else
         {
-            ResetGameSession();
+            showGameOverScreen();
         }
     }
 
@@ -91,6 +108,12 @@ public class GameSession : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
         livesText.text = playerLives.ToString();
+    }
+
+    public void showGameOverScreen()
+    {
+        SceneManager.LoadScene(1);
+        DisplayGameOverText();
     }
 
     void ResetGameSession()
