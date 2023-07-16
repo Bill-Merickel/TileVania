@@ -76177,13 +76177,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.6944667, y: -13.395441}
-      - {x: -10.465907, y: -13.431868}
-      - {x: -10.531464, y: -13.541775}
-      - {x: -10.668875, y: -66.72388}
+    - - {x: 0.6944667, y: -14.21899}
+      - {x: -9.230582, y: -14.049524}
+      - {x: -9.193203, y: -13.953547}
+      - {x: -9.124735, y: -66.62093}
       - {x: -0.7827301, y: -66.701225}
-      - {x: 74.51469, y: -66.36611}
-      - {x: 74.41077, y: -13.30051}
+      - {x: 72.66171, y: -66.36611}
+      - {x: 72.96955, y: -13.8152275}
 --- !u!1 &2137480941
 GameObject:
   m_ObjectHideFlags: 0
@@ -77530,11 +77530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2344859415801918888, guid: 7c726828358ca4cd1812a8e627a2baa9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.293
+      value: -4.26626
       objectReference: {fileID: 0}
     - target: {fileID: 2344859415801918888, guid: 7c726828358ca4cd1812a8e627a2baa9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.407
+      value: -24.40707
       objectReference: {fileID: 0}
     - target: {fileID: 2344859415956357858, guid: 7c726828358ca4cd1812a8e627a2baa9, type: 3}
       propertyPath: m_Follow
