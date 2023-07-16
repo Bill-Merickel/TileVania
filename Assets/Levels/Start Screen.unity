@@ -288,6 +288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 338471029}
     - target: {fileID: 1139523524751016169, guid: cead2428bf13d4e85b1727a7447c3a27, type: 3}
+      propertyPath: playerDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: afcb4fead2803484db77c3d460ad87ea, type: 3}
+    - target: {fileID: 1139523524751016169, guid: cead2428bf13d4e85b1727a7447c3a27, type: 3}
       propertyPath: startInstructionText
       value: 
       objectReference: {fileID: 1364031548}

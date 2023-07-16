@@ -13,6 +13,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] TextMeshProUGUI startInstructionText;
+    [SerializeField] AudioClip playerDamageSFX;
 
     void Awake()
     {
@@ -84,8 +85,10 @@ public class GameSession : MonoBehaviour
         startInstructionText.text = "Click Enter to Try Again";
     }
 
-    public void ProcessPlayerDeath()
+    public IEnumerator ProcessPlayerDeath()
     {
+        AudioSource.PlayClipAtPoint(playerDamageSFX, Camera.main.transform.position);
+        yield return new WaitForSeconds(1.5f);
         if (playerLives > 1)
         {
             TakeLife();
